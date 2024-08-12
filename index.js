@@ -17,11 +17,15 @@ app.get("/api/v1/tours", (req, res) => {
 
 app.get("/api/v1/tours/:id", (req, res) => {
   const tourId = req.params.id * 1;
-  const result = tours.find((tour) => tour.id === tourId);
+  const tour = tours.find((tour) => tour.id === tourId);
+
+  if (!tour)
+    return res.status(404).json({ status: "fail", message: "Invalid tour ID" });
+
   res.status(200).json({
     status: "success",
     totalTours: tours.length,
-    data: { tour: result },
+    data: { tour },
   });
 });
 
