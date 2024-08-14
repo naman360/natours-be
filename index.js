@@ -1,10 +1,11 @@
 const express = require("express");
 const fs = require("fs");
+const morgan = require("morgan");
 const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
-
+app.use(morgan("dev"));
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/data/tours.json`));
 
 const getAllTours = (req, res) => {
