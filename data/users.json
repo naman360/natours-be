@@ -1,0 +1,133 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "+1-202-555-0198",
+      "address": {
+        "street": "123 Maple Street",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62704"
+      },
+      "dateOfBirth": "1985-04-12"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "phone": "+1-202-555-0123",
+      "address": {
+        "street": "456 Oak Avenue",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62705"
+      },
+      "dateOfBirth": "1990-07-23"
+    },
+    {
+      "id": 3,
+      "name": "Carol White",
+      "email": "carol.white@example.com",
+      "phone": "+1-202-555-0456",
+      "address": {
+        "street": "789 Pine Road",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62706"
+      },
+      "dateOfBirth": "1988-12-01"
+    },
+    {
+      "id": 4,
+      "name": "David Brown",
+      "email": "david.brown@example.com",
+      "phone": "+1-202-555-0789",
+      "address": {
+        "street": "101 Birch Lane",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62707"
+      },
+      "dateOfBirth": "1992-03-17"
+    },
+    {
+      "id": 5,
+      "name": "Emma Davis",
+      "email": "emma.davis@example.com",
+      "phone": "+1-202-555-0910",
+      "address": {
+        "street": "202 Cedar Drive",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62708"
+      },
+      "dateOfBirth": "1986-09-09"
+    },
+    {
+      "id": 6,
+      "name": "Frank Miller",
+      "email": "frank.miller@example.com",
+      "phone": "+1-202-555-1023",
+      "address": {
+        "street": "303 Elm Street",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62709"
+      },
+      "dateOfBirth": "1995-06-15"
+    },
+    {
+      "id": 7,
+      "name": "Grace Lee",
+      "email": "grace.lee@example.com",
+      "phone": "+1-202-555-1345",
+      "address": {
+        "street": "404 Willow Way",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62710"
+      },
+      "dateOfBirth": "1982-10-21"
+    },
+    {
+      "id": 8,
+      "name": "Henry Taylor",
+      "email": "henry.taylor@example.com",
+      "phone": "+1-202-555-1567",
+      "address": {
+        "street": "505 Spruce Circle",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62711"
+      },
+      "dateOfBirth": "1993-01-30"
+    },
+    {
+      "id": 9,
+      "name": "Ivy Anderson",
+      "email": "ivy.anderson@example.com",
+      "phone": "+1-202-555-1789",
+      "address": {
+        "street": "606 Redwood Boulevard",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62712"
+      },
+      "dateOfBirth": "1989-05-05"
+    },
+    {
+      "id": 10,
+      "name": "Jack Wilson",
+      "email": "jack.wilson@example.com",
+      "phone": "+1-202-555-1890",
+      "address": {
+        "street": "707 Aspen Road",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62713"
+      },
+      "dateOfBirth": "1991-08-14"
+    }
+  ]
+  
