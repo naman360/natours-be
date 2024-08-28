@@ -1,6 +1,13 @@
 const fs = require("fs");
 
 const users = JSON.parse(fs.readFileSync(`${__dirname}/../data/users.json`));
+
+exports.checkId = (req, res, next, val) => {
+  if (val * 1 > users.length)
+    return res.status(404).json({ status: "fail", message: "Invalid user ID" });
+  next();
+};
+
 exports.getAllUsers = (req, res) => {
   res.status(200).json({
     status: "success",
@@ -13,9 +20,6 @@ exports.getUserById = (req, res) => {
   const userId = req.params.id * 1;
   const user = users.find((user) => user.id === userId);
 
-  if (!user)
-    return res.status(404).json({ status: "fail", message: "Invalid tour ID" });
-
   res.status(200).json({
     status: "success",
     totalUser: users.length,
@@ -27,9 +31,6 @@ exports.updateUser = (req, res) => {
   const userId = req.params.id * 1;
   const user = users.find((user) => user.id === userId);
 
-  if (!user)
-    return res.status(404).json({ status: "fail", message: "Invalid user ID" });
-
   res.status(200).json({
     status: "success",
     data: user,
@@ -39,9 +40,6 @@ exports.updateUser = (req, res) => {
 exports.deleteUser = (req, res) => {
   const userId = req.params.id * 1;
   const user = users.find((user) => user.id === userId);
-
-  if (!user)
-    return res.status(404).json({ status: "fail", message: "Invalid user ID" });
 
   res.status(200).json({
     status: "success",

@@ -1,6 +1,13 @@
 const fs = require("fs");
 
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/../data/tours.json`));
+
+exports.checkId = (req, res, next, val) => {
+  if (val * 1 > tours.length)
+    return res.status(404).json({ status: "fail", message: "Invalid tour ID" });
+  next();
+};
+
 exports.getAllTours = (req, res) => {
   res.status(200).json({
     status: "success",
@@ -13,9 +20,6 @@ exports.getTourById = (req, res) => {
   const tourId = req.params.id * 1;
   const tour = tours.find((tour) => tour.id === tourId);
 
-  if (!tour)
-    return res.status(404).json({ status: "fail", message: "Invalid tour ID" });
-
   res.status(200).json({
     status: "success",
     totalTours: tours.length,
@@ -27,9 +31,6 @@ exports.updateTour = (req, res) => {
   const tourId = req.params.id * 1;
   const tour = tours.find((tour) => tour.id === tourId);
 
-  if (!tour)
-    return res.status(404).json({ status: "fail", message: "Invalid tour ID" });
-
   res.status(200).json({
     status: "success",
     data: tour,
@@ -39,9 +40,6 @@ exports.updateTour = (req, res) => {
 exports.deleteTour = (req, res) => {
   const tourId = req.params.id * 1;
   const tour = tours.find((tour) => tour.id === tourId);
-
-  if (!tour)
-    return res.status(404).json({ status: "fail", message: "Invalid tour ID" });
 
   res.status(200).json({
     status: "success",
