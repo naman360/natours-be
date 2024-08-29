@@ -5,10 +5,8 @@
       "email": "alice.johnson@example.com",
       "phone": "+1-202-555-0198",
       "address": {
-        "street": "123 Maple Street",
         "city": "Springfield",
-        "state": "IL",
-        "zip": "62704"
+        "state": "IL"
       },
       "dateOfBirth": "1985-04-12"
     },

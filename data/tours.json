@@ -2,111 +2,81 @@
     {
       "id": 1,
       "name": "Enchanting Paris Getaway",
-      "duration": 5,
       "location": "Paris, France",
       "price": 1299,
       "description": "Experience the magic of the City of Light with guided tours of iconic landmarks and authentic cuisine.",
-      "maxGroupSize": 15,
-      "difficulty": "Easy",
       "rating": 4.8
     },
     {
       "id": 2,
       "name": "Machu Picchu Adventure Trek",
-      "duration": 8,
       "location": "Cusco, Peru",
       "price": 1899,
       "description": "Embark on a challenging hike through the Andes to discover the ancient Incan citadel of Machu Picchu.",
-      "maxGroupSize": 12,
-      "difficulty": "Challenging",
       "rating": 4.9
     },
     {
       "id": 3,
       "name": "Serengeti Safari Experience",
-      "duration": 7,
       "location": "Tanzania",
       "price": 3299,
       "description": "Witness the breathtaking wildlife of the African savannah on guided game drives and luxury camping.",
-      "maxGroupSize": 8,
-      "difficulty": "Moderate",
       "rating": 4.7
     },
     {
       "id": 4,
       "name": "Japanese Cultural Immersion",
-      "duration": 10,
       "location": "Tokyo and Kyoto, Japan",
       "price": 2499,
       "description": "Dive deep into Japanese culture with tea ceremonies, temple visits, and culinary adventures.",
-      "maxGroupSize": 14,
-      "difficulty": "Easy",
       "rating": 4.6
     },
     {
       "id": 5,
       "name": "Greek Island Hopping",
-      "duration": 12,
       "location": "Greece",
       "price": 2199,
       "description": "Explore the stunning beauty of Santorini, Mykonos, and Crete with boat tours and beach relaxation.",
-      "maxGroupSize": 16,
-      "difficulty": "Easy",
       "rating": 4.5
     },
     {
       "id": 6,
       "name": "Inca Trail to Machu Picchu",
-      "duration": 4,
       "location": "Cusco, Peru",
       "price": 799,
       "description": "Hike the legendary Inca Trail, culminating in a sunrise visit to Machu Picchu.",
-      "maxGroupSize": 16,
-      "difficulty": "Challenging",
       "rating": 4.8
     },
     {
       "id": 7,
       "name": "Northern Lights Adventure",
-      "duration": 6,
       "location": "Reykjavik, Iceland",
       "price": 1799,
       "description": "Chase the aurora borealis while exploring Iceland's unique landscapes and geothermal wonders.",
-      "maxGroupSize": 12,
-      "difficulty": "Moderate",
       "rating": 4.7
     },
     {
       "id": 8,
       "name": "Galapagos Wildlife Expedition",
-      "duration": 9,
       "location": "Galapagos Islands, Ecuador",
       "price": 4299,
       "description": "Discover unique wildlife on a cruise through the Galapagos archipelago with expert naturalist guides.",
-      "maxGroupSize": 20,
-      "difficulty": "Easy",
       "rating": 4.9
     },
     {
       "id": 9,
       "name": "Everest Base Camp Trek",
-      "duration": 14,
       "location": "Nepal",
       "price": 2499,
       "description": "Challenge yourself with a trek to the base of the world's highest mountain, experiencing Sherpa culture.",
-      "maxGroupSize": 12,
-      "difficulty": "Very Challenging",
       "rating": 4.8
     },
     {
       "id": 10,
       "name": "Australian Outback Adventure",
-      "duration": 8,
       "location": "Northern Territory, Australia",
       "price": 2799,
       "description": "Explore the rugged beauty of the Australian Outback, including Uluru and Kakadu National Park.",
-      "maxGroupSize": 15,
-      "difficulty": "Moderate",
       "rating": 4.6
     }
   ]
