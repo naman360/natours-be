@@ -8,6 +8,10 @@ const userSchema = new mongoose.Schema({
     city: String,
     state: String,
   },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 const Tour = mongoose.model("User", userSchema);

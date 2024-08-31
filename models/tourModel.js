@@ -6,6 +6,7 @@ const tourSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   description: { type: String, required: true },
   rating: Number,
+  createdAt: { type: Date, default: Date.now() },
 });
 
 const Tours = mongoose.model("Tour", tourSchema);
