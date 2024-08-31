@@ -8,5 +8,5 @@ const tourSchema = new mongoose.Schema({
   rating: Number,
 });
 
-const Tour = mongoose.model("User", tourSchema);
-module.exports = Tour;
+const Tours = mongoose.model("Tour", tourSchema);
+module.exports = Tours;
