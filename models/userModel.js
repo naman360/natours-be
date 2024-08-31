@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: String,
-  phone: { type: Number, required: true },
+  phone: { type: String, required: true },
   address: {
     city: String,
     state: String,
+    zip: String,
   },
   createdAt: {
     type: Date,
@@ -14,5 +15,5 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const Tour = mongoose.model("User", userSchema);
-module.exports = Tour;
+const Users = mongoose.model("User", userSchema);
+module.exports = Users;
