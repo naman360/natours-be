@@ -6,6 +6,8 @@ const tourSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   description: { type: String, required: true },
   rating: Number,
+  difficulty: String,
+  startDates: [{ type: Date }],
   createdAt: { type: Date, default: Date.now() },
 });
 

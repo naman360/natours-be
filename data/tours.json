@@ -1,82 +1,142 @@
 [
-    {
-      "id": 1,
-      "name": "Enchanting Paris Getaway",
-      "location": "Paris, France",
-      "price": 1299,
-      "description": "Experience the magic of the City of Light with guided tours of iconic landmarks and authentic cuisine.",
-      "rating": 4.8
-    },
-    {
-      "id": 2,
-      "name": "Machu Picchu Adventure Trek",
-      "location": "Cusco, Peru",
-      "price": 1899,
-      "description": "Embark on a challenging hike through the Andes to discover the ancient Incan citadel of Machu Picchu.",
-      "rating": 4.9
-    },
-    {
-      "id": 3,
-      "name": "Serengeti Safari Experience",
-      "location": "Tanzania",
-      "price": 3299,
-      "description": "Witness the breathtaking wildlife of the African savannah on guided game drives and luxury camping.",
-      "rating": 4.7
-    },
-    {
-      "id": 4,
-      "name": "Japanese Cultural Immersion",
-      "location": "Tokyo and Kyoto, Japan",
-      "price": 2499,
-      "description": "Dive deep into Japanese culture with tea ceremonies, temple visits, and culinary adventures.",
-      "rating": 4.6
-    },
-    {
-      "id": 5,
-      "name": "Greek Island Hopping",
-      "location": "Greece",
-      "price": 2199,
-      "description": "Explore the stunning beauty of Santorini, Mykonos, and Crete with boat tours and beach relaxation.",
-      "rating": 4.5
-    },
-    {
-      "id": 6,
-      "name": "Inca Trail to Machu Picchu",
-      "location": "Cusco, Peru",
-      "price": 799,
-      "description": "Hike the legendary Inca Trail, culminating in a sunrise visit to Machu Picchu.",
-      "rating": 4.8
-    },
-    {
-      "id": 7,
-      "name": "Northern Lights Adventure",
-      "location": "Reykjavik, Iceland",
-      "price": 1799,
-      "description": "Chase the aurora borealis while exploring Iceland's unique landscapes and geothermal wonders.",
-      "rating": 4.7
-    },
-    {
-      "id": 8,
-      "name": "Galapagos Wildlife Expedition",
-      "location": "Galapagos Islands, Ecuador",
-      "price": 4299,
-      "description": "Discover unique wildlife on a cruise through the Galapagos archipelago with expert naturalist guides.",
-      "rating": 4.9
-    },
-    {
-      "id": 9,
-      "name": "Everest Base Camp Trek",
-      "location": "Nepal",
-      "price": 2499,
-      "description": "Challenge yourself with a trek to the base of the world's highest mountain, experiencing Sherpa culture.",
-      "rating": 4.8
-    },
-    {
-      "id": 10,
-      "name": "Australian Outback Adventure",
-      "location": "Northern Territory, Australia",
-      "price": 2799,
-      "description": "Explore the rugged beauty of the Australian Outback, including Uluru and Kakadu National Park.",
-      "rating": 4.6
-    }
-  ]
+  {
+    "name": "Enchanting Paris Getaway",
+    "location": "Paris, France",
+    "price": 1299,
+    "description": "Experience the magic of the City of Light with guided tours of iconic landmarks and authentic cuisine.",
+    "rating": 4.8,
+    "difficulty": "easy",
+    "startDates": [
+      "2024-04-01T00:00:00Z",
+      "2025-05-15T00:00:00Z",
+      "2026-06-10T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Machu Picchu Adventure Trek",
+    "location": "Cusco, Peru",
+    "price": 1899,
+    "description": "Embark on a challenging hike through the Andes to discover the ancient Incan citadel of Machu Picchu.",
+    "rating": 4.9,
+    "difficulty": "easy",
+    "startDates": [
+      "2024-03-20T00:00:00Z",
+      "2025-05-05T00:00:00Z",
+      "2026-07-12T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Serengeti Safari Experience",
+    "location": "Tanzania",
+    "price": 3299,
+    "description": "Witness the breathtaking wildlife of the African savannah on guided game drives and luxury camping.",
+    "rating": 4.7,
+    "difficulty": "medium",
+    "startDates": [
+      "2024-04-10T00:00:00Z",
+      "2025-05-20T00:00:00Z",
+      "2026-06-25T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Japanese Cultural Immersion",
+    "location": "Tokyo and Kyoto, Japan",
+    "price": 2499,
+    "description": "Dive deep into Japanese culture with tea ceremonies, temple visits, and culinary adventures.",
+    "rating": 4.6,
+    "difficulty": "medium",
+    "startDates": [
+      "2024-03-15T00:00:00Z",
+      "2025-05-10T00:00:00Z",
+      "2026-07-01T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Greek Island Hopping",
+    "location": "Greece",
+    "price": 2199,
+    "description": "Explore the stunning beauty of Santorini, Mykonos, and Crete with boat tours and beach relaxation.",
+    "rating": 4.5,
+    "difficulty": "medium",
+    "startDates": [
+      "2024-04-20T00:00:00Z",
+      "2025-05-25T00:00:00Z",
+      "2026-06-30T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Inca Trail to Machu Picchu",
+    "location": "Cusco, Peru",
+    "price": 799,
+    "description": "Hike the legendary Inca Trail, culminating in a sunrise visit to Machu Picchu.",
+    "rating": 4.8,
+    "difficulty": "hard",
+    "startDates": [
+      "2024-03-01T00:00:00Z",
+      "2025-05-15T00:00:00Z",
+      "2026-07-10T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Northern Lights Adventure",
+    "location": "Reykjavik, Iceland",
+    "price": 1799,
+    "description": "Chase the aurora borealis while exploring Iceland's unique landscapes and geothermal wonders.",
+    "rating": 4.7,
+    "difficulty": "hard",
+    "startDates": [
+      "2024-03-25T00:00:00Z",
+      "2025-05-20T00:00:00Z",
+      "2026-07-15T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Galapagos Wildlife Expedition",
+    "location": "Galapagos Islands, Ecuador",
+    "price": 4299,
+    "description": "Discover unique wildlife on a cruise through the Galapagos archipelago with expert naturalist guides.",
+    "rating": 4.9,
+    "difficulty": "hard",
+    "startDates": [
+      "2024-04-05T00:00:00Z",
+      "2025-06-10T00:00:00Z",
+      "2026-08-20T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Everest Base Camp Trek",
+    "location": "Nepal",
+    "price": 2499,
+    "description": "Challenge yourself with a trek to the base of the world's highest mountain, experiencing Sherpa culture.",
+    "rating": 4.8,
+    "difficulty": "hard",
+    "startDates": [
+      "2024-03-30T00:00:00Z",
+      "2025-05-15T00:00:00Z",
+      "2026-07-05T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "name": "Australian Outback Adventure",
+    "location": "Northern Territory, Australia",
+    "price": 2799,
+    "description": "Explore the rugged beauty of the Australian Outback, including Uluru and Kakadu National Park.",
+    "rating": 4.6,
+    "difficulty": "easy",
+    "startDates": [
+      "2024-04-15T00:00:00Z",
+      "2025-06-01T00:00:00Z",
+      "2026-07-20T00:00:00Z"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z"
+  }
+]
