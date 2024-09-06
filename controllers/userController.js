@@ -67,16 +67,3 @@ exports.deleteUser = async (req, res) => {
     });
   }
 };
-
-exports.createUser = async (req, res) => {
-  try {
-    const userBody = req.body;
-    const newUser = await Users.create(userBody);
-    return res.status(201).json({
-      status: "success",
-      data: { tour: newUser },
-    });
-  } catch (error) {
-    return res.status(400).send({ status: "fail", message: error });
-  }
-};
