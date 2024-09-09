@@ -1,4 +1,5 @@
 const bcryptjs = require("bcryptjs");
+const bcrypt = require("bcryptjs/dist/bcrypt");
 const mongoose = require("mongoose");
 const validator = require("validator");
 const userSchema = new mongoose.Schema({
@@ -15,6 +16,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide a password"],
     minLength: 8,
+    select: false,
   },
   confirmPassword: {
     type: String,
@@ -40,5 +42,10 @@ userSchema.pre("save", async function (next) {
   this.confirmPassword = undefined;
   next();
 });
+
+userSchema.methods.comparePassword = function (candidatePass, userPass) {
+  return bcrypt.compare(candidatePass, userPass);
+};
+
 const Users = mongoose.model("User", userSchema);
 module.exports = Users;

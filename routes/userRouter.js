@@ -9,6 +9,7 @@ const authController = require("../controllers/authController");
 const userRouter = express.Router();
 
 userRouter.post("/signup", authController.signup);
+userRouter.post("/login", authController.login);
 userRouter.route("/").get(getAllUsers);
 userRouter.route("/:id").get(getUserById).patch(updateUser).delete(deleteUser);
 module.exports = userRouter;
