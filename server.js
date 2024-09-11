@@ -15,6 +15,9 @@ mongoose
     console.log("Database Connected!");
   });
 
+/** Useful for using projections (select: false) in model */
+mongoose.set("toObject", { useProjection: true });
+mongoose.set("toJSON", { useProjection: true });
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {

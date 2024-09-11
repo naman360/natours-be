@@ -86,3 +86,16 @@ exports.restrictTo = (...roles) => {
     next();
   };
 };
+
+exports.forgotPassword = catchAsync(async (req, res, next) => {
+  const user = await Users.findOne({ email: req.body.email });
+  if (!user) {
+    return next(new AppError("The user does not exists", 404));
+  }
+  const resetToken = user.createResetPasswordToken();
+  /**
+   *  Useful because we modified the document properties, and the document will only update after save.
+   * Using validateBeforeSave to avoid validation as user model has required fields.
+   */
+  await user.save({ validateBeforeSave: false });
+});
