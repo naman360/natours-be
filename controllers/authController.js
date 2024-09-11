@@ -16,6 +16,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     password: req.body.password,
     confirmPassword: req.body.confirmPassword,
     passwordChangedAt: req.body.passwordChangedAt,
+    role: req.body.role,
   });
   const token = signToken(newUser._id);
   res.status(201).json({
@@ -71,5 +72,17 @@ exports.protect = catchAsync(async (req, res, next) => {
   if (freshUser.isPasswordChanged(decoded.iat)) {
     return next(new AppError("User recently changed the password"));
   }
+  req.user = freshUser;
   next();
 });
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new AppError("You do not have persmission to perform this action", 401)
+      );
+    }
+    next();
+  };
+};
