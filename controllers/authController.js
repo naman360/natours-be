@@ -3,6 +3,7 @@ const { promisify } = require("util");
 const Users = require("../models/userModel");
 const catchAsync = require("./../utils/catchAsync");
 const AppError = require("../utils/appError");
+const sendEmail = require("../utils/email");
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.AUTH_SECRET, {
@@ -98,4 +99,24 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
    * Using validateBeforeSave to avoid validation as user model has required fields.
    */
   await user.save({ validateBeforeSave: false });
+  const resetUrl = `${req.protocol}://${req.get(
+    "host"
+  )}/api/v1/users/reset-password/${resetToken}`;
+  const message = `Forgot your password? Submmit a patch request with your new password and confirmPasword to: ${resetUrl}.\n`;
+
+  try {
+    sendEmail({
+      message,
+      email: user.email,
+      subject: "Reset Password Token",
+    });
+    res.status(200).json({ status: "success", messgae: "Token send to email" });
+  } catch (err) {
+    user.passwordResetToken = undefined;
+    user.passwordResetExp = undefined;
+    await user.save({ validateBeforeSave: false });
+    return next(new AppError("There was an issue sending email!", 500));
+  }
 });
+
+exports.resetPassword = (req, res, next) => {};

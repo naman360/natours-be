@@ -11,6 +11,7 @@ const userRouter = express.Router();
 userRouter.post("/signup", authController.signup);
 userRouter.post("/login", authController.login);
 userRouter.post("/forgot-password", authController.forgotPassword);
+userRouter.post("/reset-password/:token", authController.resetPassword);
 userRouter.route("/").get(getAllUsers);
 userRouter.route("/:id").get(getUserById).patch(updateUser).delete(deleteUser);
 module.exports = userRouter;
