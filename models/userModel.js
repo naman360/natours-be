@@ -51,8 +51,15 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+
+  this.passwordChangedAt = Date.now() - 1000;
+  next();
+});
+
 userSchema.methods.comparePassword = function (candidatePass, userPass) {
-  return bcrypt.compare(candidatePass, userPass);
+  return bcryptjs.compare(candidatePass, userPass);
 };
 
 userSchema.methods.isPasswordChanged = function (JWTTimestamp) {
