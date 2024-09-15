@@ -149,3 +149,11 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     user,
   });
 });
+
+exports.deleteUser = catchAsync(async (req, res, next) => {
+  const user = await Users.findByIdAndUpdate(req.user.id, { active: false });
+  return res.status(204).json({
+    status: "success",
+    data: null,
+  });
+});
