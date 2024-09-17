@@ -11,6 +11,21 @@ const signToken = (id) => {
     expiresIn: process.env.EXPIRES_IN,
   });
 };
+const createAndSendToken = (user, statusCode, res) => {
+  const token = signToken(user._id);
+  const cookieOption = {
+    expires: new Date(
+      Date.now() + process.env.COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+    ),
+    httpOnly: true,
+  };
+  if (process.env.NODE_ENV === "production") cookieOption.secure = true;
+  res.cookie("jwt", token, cookieOption);
+  res.status(statusCode).json({
+    status: "success",
+    user,
+  });
+};
 exports.signup = catchAsync(async (req, res, next) => {
   const newUser = await Users.create({
     name: req.body.name,
@@ -20,14 +35,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordChangedAt: req.body.passwordChangedAt,
     role: req.body.role,
   });
-  const token = signToken(newUser._id);
-  res.status(201).json({
-    status: "success",
-    token,
-    user: {
-      newUser,
-    },
-  });
+  createAndSendToken(newUser, 201, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -41,16 +49,15 @@ exports.login = catchAsync(async (req, res, next) => {
   if (!user || !(await user.comparePassword(password, user.password))) {
     return next(new AppError("Incorrect email or password", 401));
   }
-  const token = signToken(user._id);
-  return res.status(200).json({
-    status: "success",
-    token,
-    user: {
+  createAndSendToken(
+    {
       _id: user._id,
       email: user.email,
       name: user.name,
     },
-  });
+    200,
+    res
+  );
 });
 
 exports.protect = catchAsync(async (req, res, next) => {
@@ -90,7 +97,9 @@ exports.restrictTo = (...roles) => {
 };
 
 exports.forgotPassword = catchAsync(async (req, res, next) => {
+  console.log(req.body.email);
   const user = await Users.findOne({ email: req.body.email });
+  console.log(user);
   if (!user) {
     return next(new AppError("The user does not exists", 404));
   }
@@ -141,13 +150,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   user.passwordResetExp = undefined;
 
   await user.save();
-
-  const token = signToken(user._id);
-  res.status(200).json({
-    status: "success",
-    token,
-    user,
-  });
+  createAndSendToken(user, 200, res);
 });
 
 exports.deleteUser = catchAsync(async (req, res, next) => {
