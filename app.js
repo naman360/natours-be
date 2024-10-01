@@ -6,6 +6,7 @@ const userRouter = require("./routes/userRouter");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/error-handler");
 const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
 const app = express();
 
 if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
